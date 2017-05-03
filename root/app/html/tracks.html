@@ -1,0 +1,25 @@
+<div ng-init="rc.checkRoute()">
+	<header class="page-banner">
+		<span class="page-title">Tracks</span><br>
+		<span>{{rc.getResultsText()}}</span>
+	</header>
+	<div
+		class="card"
+		ng-repeat="track in rc.getResults() | orderBy: 'name'">
+    	<img
+			src="https://placehold.it/200x200"
+			class="card-image"/>
+		<a
+			class="card-image-overlay"
+			href="{{track.external_urls.spotify}}">
+		</a>
+		<div class="card-info">
+    		<a href="{{track.external_urls.spotify}}">{{track.name}}</a>
+			<a
+				class="card-link"
+				href="{{track.external_urls.spotify}}">
+				<i class="fa fa-external-link"></i>
+			</a>
+    	</div>
+	</div>
+</div>

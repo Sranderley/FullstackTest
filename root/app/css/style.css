@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+}
+
+a, a:hover, a:active, a:visited, a:focus, div, select {
+    text-decoration: none;
+    outline: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;
+}
+
+body {
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #E1E3E8;
+}
+
+select {
+	cursor: pointer;
+}
+
+.site-header {
+	text-align: center;
+	background-color: #1C1C1F;
+}
+
+.header-text {
+	display: inline-block;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	font-size: 4em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.search-ctrl {
+	width: 10vw;
+	height: 4vh;
+	margin-bottom: 2vh;
+	font-size: 1.2em;
+	border-radius: 3px;
+	padding-left: 5px;
+	border: none;
+}
+
+.search-btn {
+	height: 4vh;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 2vh;
+	line-height: 4vh;
+	font-size: 1.2em;
+	background-color: #57595F;
+	color: rgba(255, 255, 255, 0.7);
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+}
+
+.search-btn:hover {
+	background-color: #8A8C8F;
+}
+
+.ribbon {
+	background-color: #57595F;
+	padding: 1vh;
+	text-align: center;
+	color: white;
+}
+
+.ribbon-ctrl {
+	border-radius: 3px;
+	padding-left: 5px;
+	border: none;
+}
+
+.ribbon-btn {
+	width: 10vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	background-color: #8A8C8F;
+	color: rgba(255, 255, 255, 0.7);
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+}
+
+.page-viewer {
+	margin: 2vh 10vw 5vw 10vw;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: white;
+    box-shadow: 5px 2px 4px #888888;
+}
+
+.page-banner {
+	width: 100%;
+	padding: 10px;
+	background-color: #8A8C8F;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.page-title {
+	font-size: 3em;
+}
+
+.card {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	height: 300px;
+	width: 200px;
+	float: left;
+	z-index: 1;
+    box-shadow: 5px 2px 4px #888888;
+}
+
+.card-info {
+	padding: 10px;
+	position: absolute;
+	top: 200px;
+	height: 100px;
+	width: 200px;
+	background-color: #57595F;
+}
+
+.card-info > a {
+	color: white;
+}
+
+.card-image {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	z-index: 0;
+}
+
+.card-image-overlay {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	z-index: 1;
+}
+
+.card-image-overlay:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card-link {
+	position: absolute;
+	top: 75px;
+	left: 175px;
+}
+
+.card-link:hover {
+	color: white;
+}

@@ -1,0 +1,33 @@
+<div ng-controller="ResultsController as rc">
+	<div class="ribbon">
+	    <button
+	    	class="ribbon-btn"
+	    	ng-click="sc.previous()"
+	    	ng-style="{
+	    		'visibility': sc.showPrevious() ? 'visible' : 'hidden'
+	    	}">
+	    	<i class="fa fa-chevron-left"></i>
+	    </button>
+
+		<span>Displaying </span>
+	    <select
+	    	class="ribbon-ctrl"
+	    	ng-model="sc.limit"
+	    	ng-change="sc.updateLimit()">
+	        <option value="20">20</option>
+	        <option value="35">35</option>
+	        <option value="50">50</option>
+	    </select>
+	    <span> results per page</span>
+
+	    <button
+	    	class="ribbon-btn"
+	    	ng-click="sc.next()"
+	    	ng-style="{
+	    		'visibility': sc.showNext() ? 'visible' : 'hidden'
+	    	}">
+	    	<i class="fa fa-chevron-right"></i>
+	    </button>
+	</div>
+	<div ui-view class="page-viewer"></div>
+</div>

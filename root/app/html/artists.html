@@ -1,0 +1,25 @@
+<div ng-init="rc.checkRoute()">
+	<header class="page-banner">
+		<span class="page-title">Artists</span><br>
+		<span>{{rc.getResultsText()}}</span>
+	</header>
+	<div
+		class="card"
+		ng-repeat="artist in rc.getResults() | orderBy: 'name'">
+    	<img
+			src="{{artist.images[0].url || 'https://placehold.it/200x200'}}"
+			class="card-image"/>
+		<a
+			class="card-image-overlay"
+			href="{{artist.external_urls.spotify}}">
+		</a>
+		<div class="card-info">
+    		<a href="{{artist.external_urls.spotify}}">{{artist.name}}</a>
+    		<a
+				class="card-link"
+				href="{{track.external_urls.spotify}}">
+				<i class="fa fa-external-link"></i>
+			</a>
+    	</div>
+	</div>
+</div>

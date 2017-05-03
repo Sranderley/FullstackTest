@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Spotify Search</title>
+
+        <!-- Angular.js Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="app/css/style.css">
+
+	</head>
+
+    <body ng-app="app">
+        <div ng-controller="SearchController as sc">
+            <header class="site-header">
+                <span class="header-text">Spotify Search</span><br>
+
+                <input
+                    type="search"
+                    placeholder="Search"
+                    class="search-ctrl"
+                    ng-model="sc.parameter">
+
+                <select
+                    class="search-ctrl"
+                    ng-model="sc.type">
+                    <option value="artist">Artists</option>
+                    <option value="track">Tracks</option>
+                    <option value="album">Albums</option>
+                </select>
+
+                <button
+                    class="search-btn"
+                    ng-click="sc.submit( sc.parameter, sc.type, 0 )">
+                    Submit
+                </button>
+            </header>
+
+            <div ui-view></div>
+        </div>
+    </body>
+</html>
+
+<!-- Modules -->
+<script src="app/js/app.js"></script>
+
+<!-- Services -->
+<script src="app/js/HttpService.js"></script>
+<script src="app/js/SearchService.js"></script>
+
+<!-- Controllers -->
+<script src="app/js/ResultsController.js"></script>
+<script src="app/js/SearchController.js"></script>
